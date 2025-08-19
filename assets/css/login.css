@@ -1,0 +1,55 @@
+body.login-page {
+    background-color: #f3f4f6; /* Màu nền xám nhạt */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    background: var(--white);
+    padding: 48px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-card .logo {
+    width: 70px;
+    margin-bottom: 24px;
+}
+
+.login-card h1 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.login-card p {
+    margin-bottom: 32px;
+    color: var(--text-secondary);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.login-card .btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 1em;
+}

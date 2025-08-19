@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kết Quả Học Tập</title>
+        <link rel="stylesheet" href="../assets/css/base.css" />
+        <link rel="stylesheet" href="../assets/css/dashboard.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <aside class="sidebar" id="sidebar-container"></aside>
+            <main class="main-content">
+                <header><h1>Kết quả học tập</h1></header>
+                <div class="toolbar">
+                    <select id="semester-selector" style="max-width: 300px">
+                        <option value="hk1-2024">
+                            Học kỳ 1 - Năm học 2024-2025
+                        </option>
+                        <option value="hk2-2023">
+                            Học kỳ 2 - Năm học 2023-2024
+                        </option>
+                    </select>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Môn học</th>
+                            <th>Điểm số</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cơ sở dữ liệu</td>
+                            <td>8.5</td>
+                        </tr>
+                        <tr>
+                            <td>Lập trình web</td>
+                            <td>9.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card" style="margin-top: 24px; max-width: 400px">
+                    <h3>Tổng kết</h3>
+                    <p><strong>GPA học kỳ:</strong> 8.75</p>
+                    <p><strong>GPA toàn khóa:</strong> 3.2</p>
+                </div>
+            </main>
+        </div>
+        <script src="../assets/js/dashboard.js"></script>
+    </body>
+</html>
