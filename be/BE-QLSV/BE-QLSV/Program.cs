@@ -15,6 +15,7 @@ builder.Services.AddDbContext<StudentManagerDbContext>(options =>
 builder.Services.AddScoped<IRoleServices, RoleServices>();
 builder.Services.AddScoped<IClassServices, ClassServices>();
 builder.Services.AddScoped<ISubjectServices, SubjectServices>();
+builder.Services.AddScoped<IGradeServices, GradeServices>();
 
 
 
