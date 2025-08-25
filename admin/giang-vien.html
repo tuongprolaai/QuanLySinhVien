@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản Lý Giảng Viên</title>
+        <link rel="stylesheet" href="../assets/css/base.css" />
+        <link rel="stylesheet" href="../assets/css/dashboard.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <aside class="sidebar" id="sidebar-container"></aside>
+            <main class="main-content">
+                <header><h1>Quản lý Giảng viên</h1></header>
+                <div class="toolbar">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i
+                        ><input type="text" placeholder="Tìm kiếm..." />
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i><span>Thêm mới</span>
+                    </button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã GV</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Môn phụ trách</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GV01</td>
+                            <td>Nguyễn Thị B</td>
+                            <td>b.nt@example.com</td>
+                            <td>Cơ sở dữ liệu, Lập trình Web</td>
+                            <td>
+                                <button class="btn btn-warning btn-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn btn-danger btn-icon">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GV02</td>
+                            <td>Lê Văn C</td>
+                            <td>c.lv@example.com</td>
+                            <td>Mạng máy tính</td>
+                            <td>
+                                <button class="btn btn-warning btn-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn btn-danger btn-icon">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <!-- Teacher Modal -->
+        <div class="modal-overlay" id="teacher-modal-overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="teacher-modal-title">Thêm Mới Giảng Viên</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="teacher-form">
+                        <div class="input-group">
+                            <label for="teacher-name">Họ và tên</label>
+                            <input type="text" id="teacher-name" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="teacher-email">Email</label>
+                            <input type="email" id="teacher-email" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="teacher-subjects"
+                                >Môn học phụ trách (cách nhau bởi dấu
+                                phẩy)</label
+                            >
+                            <input type="text" id="teacher-subjects" required />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        class="btn btn-secondary"
+                        id="teacher-modal-close-btn"
+                        type="button"
+                    >
+                        Hủy
+                    </button>
+                    <button
+                        class="btn btn-primary"
+                        id="teacher-modal-save-btn"
+                        type="submit"
+                        form="teacher-form"
+                    >
+                        <i class="fas fa-save"></i>
+                        <span>Lưu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Delete Modal -->
+        <div class="modal-overlay" id="delete-confirm-modal-overlay">
+            <div class="modal" style="max-width: 400px">
+                <div class="modal-header">
+                    <h2>Xác nhận xóa</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa giảng viên này không?</p>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        class="btn btn-secondary"
+                        id="delete-cancel-btn"
+                        type="button"
+                    >
+                        Hủy
+                    </button>
+                    <button class="btn btn-danger" id="delete-confirm-btn">
+                        <i class="fas fa-trash"></i>
+                        <span>Xóa</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="../assets/js/dashboard.js"></script>
+        <script src="../assets/js/admin-interaction.js"></script>
+    </body>
+</html>

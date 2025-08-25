@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Đăng Nhập - Hệ Thống Quản Lý Sinh Viên</title>
+        <link rel="stylesheet" href="./assets/css/base.css" />
+        <link rel="stylesheet" href="./assets/css/login.css" />
+    </head>
+    <body class="login-page">
+        <div class="login-container">
+            <div class="login-card">
+                <h1>Chào mừng trở lại!</h1>
+                <p>Đăng nhập vào hệ thống quản lý sinh viên</p>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Tên đăng nhập</label>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Nhập 'admin', 'teacher01' hoặc 'sv001'"
+                            required
+                        />
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Mật khẩu</label>
+                        <input
+                            type="password"
+                            id="password"
+                            value="123456"
+                            required
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Đăng Nhập</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script src="./assets/js/login.js"></script>
+    </body>
+</html>

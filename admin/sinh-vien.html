@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản Lý Sinh Viên</title>
+        <link rel="stylesheet" href="../assets/css/base.css" />
+        <link rel="stylesheet" href="../assets/css/dashboard.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <aside class="sidebar" id="sidebar-container"></aside>
+            <main class="main-content">
+                <header>
+                    <h1>Quản lý Sinh viên</h1>
+                </header>
+                <div class="toolbar">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input
+                            type="text"
+                            placeholder="Tìm kiếm theo tên hoặc mã sinh viên..."
+                        />
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        <span>Thêm mới</span>
+                    </button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Họ tên</th>
+                            <th>Lớp</th>
+                            <th>Email</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SV001</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>CNTT1</td>
+                            <td>an.nv@example.com</td>
+                            <td>
+                                <button class="btn btn-warning btn-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn btn-danger btn-icon">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SV002</td>
+                            <td>Trần Thị B</td>
+                            <td>CNTT1</td>
+                            <td>b.tt@example.com</td>
+                            <td>
+                                <button class="btn btn-warning btn-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn btn-danger btn-icon">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SV003</td>
+                            <td>Lê Văn C</td>
+                            <td>XD1</td>
+                            <td>c.lv@example.com</td>
+                            <td>
+                                <button class="btn btn-warning btn-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                                <button class="btn btn-danger btn-icon">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <!-- Student Modal -->
+        <div class="modal-overlay" id="student-modal-overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="modal-title">Thêm Mới Sinh Viên</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="student-form">
+                        <div class="input-group">
+                            <label for="student-name">Họ và tên</label>
+                            <input type="text" id="student-name" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="student-dob">Ngày sinh</label>
+                            <input
+                                type="date"
+                                id="student-dob"
+                                style="width: auto"
+                                required
+                            />
+                        </div>
+                        <div class="input-group">
+                            <label for="student-class">Lớp</label>
+                            <input type="text" id="student-class" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="student-email">Email</label>
+                            <input type="email" id="student-email" required />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        class="btn btn-secondary"
+                        id="modal-close-btn"
+                        type="button"
+                    >
+                        Hủy
+                    </button>
+                    <button
+                        class="btn btn-primary"
+                        id="modal-save-btn"
+                        type="submit"
+                        form="student-form"
+                    >
+                        <i class="fas fa-save"></i>
+                        <span>Lưu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Confirmation Delete Modal -->
+        <div class="modal-overlay" id="delete-confirm-modal-overlay">
+            <div class="modal" style="max-width: 400px">
+                <div class="modal-header">
+                    <h2>Xác nhận xóa</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Bạn có chắc chắn muốn xóa sinh viên này không? Hành động
+                        này không thể hoàn tác.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        class="btn btn-secondary"
+                        id="delete-cancel-btn"
+                        type="button"
+                    >
+                        Hủy
+                    </button>
+                    <button class="btn btn-danger" id="delete-confirm-btn">
+                        <i class="fas fa-trash"></i>
+                        <span>Xóa</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="../assets/js/dashboard.js"></script>
+        <script src="../assets/js/admin-interaction.js"></script>
+    </body>
+</html>

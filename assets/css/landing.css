@@ -1,0 +1,43 @@
+a {
+    text-decoration: none;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.landing-content {
+    max-width: 700px;
+}
+
+.landing-logo {
+    width: 100px;
+    margin-bottom: 32px;
+}
+
+.landing-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.landing-content p {
+    font-size: 1.2em;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.landing-content .btn {
+    padding: 16px 32px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
