@@ -4,6 +4,7 @@ using BE_QLSV.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BE_QLSV.Migrations
 {
     [DbContext(typeof(StudentManagerDbContext))]
-    partial class StudentManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250825123447_AddStatusForStudent_Lecturer")]
+    partial class AddStatusForStudent_Lecturer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -161,16 +164,11 @@ namespace BE_QLSV.Migrations
                     b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
-                    b.Property<int>("IsActive")
-                        .HasColumnType("int");
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LecturerCode")
                         .IsRequired()
@@ -244,8 +242,8 @@ namespace BE_QLSV.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
-                    b.Property<int>("IsActive")
-                        .HasColumnType("int");
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("PhoneNumber")
                         .HasMaxLength(10)

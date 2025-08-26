@@ -75,7 +75,7 @@ namespace BE_QLSV.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Role học thất bại: {ex.Message}");
+                return BadRequest($"Xoá Role thất bại: {ex.Message}");
             }
         }
     }

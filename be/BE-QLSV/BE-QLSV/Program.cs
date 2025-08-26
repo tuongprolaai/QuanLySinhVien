@@ -12,9 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<StudentManagerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolDb")));
 
+builder.Services.AddCors(options => { options.AddPolicy("AllowFrontEnd", policy => policy.WithOrigins("http://localhost:5173").AllowAnyHeader().AllowAnyMethod()); });
+
+
 builder.Services.AddScoped<IRoleServices, RoleServices>();
 builder.Services.AddScoped<IClassServices, ClassServices>();
 builder.Services.AddScoped<ISubjectServices, SubjectServices>();
+builder.Services.AddScoped<IStudentServices, StudentServices>();
+builder.Services.AddScoped<ILecturerServices, LecturerServices>();
 
 
 
@@ -32,6 +37,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowFrontEnd");
 
 app.UseAuthorization();
 

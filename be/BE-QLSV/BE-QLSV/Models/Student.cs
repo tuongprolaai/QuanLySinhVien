@@ -24,6 +24,7 @@ namespace BE_QLSV.Models
 
         [StringLength(10)]
         public string? PhoneNumber { get; set; }
+        public StudentStatus IsActive { get; set; }
 
         public Guid? AccountId { get; set; }
         public Account? Account { get; set; }
@@ -37,5 +38,12 @@ namespace BE_QLSV.Models
     {
         Female = 0,
         Male = 1,
+    }
+    public enum StudentStatus
+    {
+        Enrolled = 0, // đang học
+        Suspended = 1, // bảo lưu
+        Graduated = 2, // tốt nghiệp
+        DroppedOut = 3 // thôi học
     }
 }

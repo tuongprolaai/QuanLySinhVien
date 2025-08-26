@@ -13,6 +13,10 @@ namespace BE_QLSV.Models
         [StringLength(20)]
         public string LecturerCode { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string FullName { get; set; }
+
         public DateTime? DateOfBirth { get; set; }
         public LecturerGender Gender { get; set; }
 
@@ -21,6 +25,8 @@ namespace BE_QLSV.Models
 
         [StringLength(10)]
         public string? PhoneNumber { get; set; }
+
+        public LecturerStatus IsActive { get; set; }
 
         public Guid? AccountId { get; set; }
         public Account? Account { get; set; }
@@ -38,5 +44,13 @@ namespace BE_QLSV.Models
     {
         Female = 0,
         Male = 1,
+    }
+    public enum LecturerStatus
+    {
+        Active = 0, // dạy
+        Inactive = 1, // không giảng dạy
+        Retired = 2, // nghỉ hưu
+        Resigned = 3 // từ chức
+
     }
 }
