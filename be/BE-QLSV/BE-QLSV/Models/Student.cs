@@ -27,6 +27,7 @@ namespace BE_QLSV.Models
         public StudentStatus IsActive { get; set; }
 
         public Guid? AccountId { get; set; }
+        
         public Account? Account { get; set; }
 
         public Guid? ClassId { get; set; }
