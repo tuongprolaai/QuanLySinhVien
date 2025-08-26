@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "33EVM069rbroVe/cMFlfORWqqGoVhLR5+omPBBqvJz0=",
+  "Hash": "gbONr9uwzWIGmmsIlUNr8Or6y4FFW9kgjlgMKsjk50M=",
   "Source": "BE-QLSV",
   "BasePath": "_content/BE-QLSV",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
