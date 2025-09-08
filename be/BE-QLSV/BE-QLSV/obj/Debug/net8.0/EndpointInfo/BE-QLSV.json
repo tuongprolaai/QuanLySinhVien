@@ -100,8 +100,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -954,8 +954,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "format": "uuid"
           },
           "username": {
             "type": "string",
@@ -978,8 +978,8 @@
             "format": "date-time"
           },
           "studentId": {
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
+            "format": "uuid",
             "nullable": true
           },
           "student": {
@@ -1214,8 +1214,8 @@
             "$ref": "#/components/schemas/LecturerStatus"
           },
           "accountId": {
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
+            "format": "uuid",
             "nullable": true
           },
           "account": {

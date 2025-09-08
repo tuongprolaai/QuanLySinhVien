@@ -23,7 +23,7 @@ namespace BE_QLSV.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Account>> GetAccount(int id)
+        public async Task<ActionResult<Account>> GetAccount(Guid id)
         {
             var account = await _accountService.GetAccountByIdAsync(id);
             if (account == null) return NotFound();

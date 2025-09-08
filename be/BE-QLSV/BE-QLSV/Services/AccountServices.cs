@@ -17,17 +17,23 @@ namespace BE_QLSV.Services
 
         public async Task<IEnumerable<Account>> GetAllAccountsAsync()
         {
-            return await _context.Accounts.ToListAsync();
+            return await _context.Accounts
+                .Include(a => a.Student)
+                .Include(a => a.Lecturer)
+                .ToListAsync();
         }
 
-        public async Task<Account?> GetAccountByIdAsync(int id)
+        public async Task<Account?> GetAccountByIdAsync(Guid id)
         {
-            return await _context.Accounts.FindAsync(id);
+            return await _context.Accounts
+              .Include(a => a.Student)
+              .Include(a => a.Lecturer)
+              .FirstOrDefaultAsync(a => a.Id == id);
         }
 
         public async Task<Account> CreateAccountAsync(Account account)
         {
-            account.CreatedAt = DateTime.Now;
+            account.CreatedAt = DateTime.UtcNow;
             _context.Accounts.Add(account);
             await _context.SaveChangesAsync();
             return account;

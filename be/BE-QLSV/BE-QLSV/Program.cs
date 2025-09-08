@@ -20,6 +20,7 @@ builder.Services.AddScoped<IClassServices, ClassServices>();
 builder.Services.AddScoped<ISubjectServices, SubjectServices>();
 builder.Services.AddScoped<IStudentServices, StudentServices>();
 builder.Services.AddScoped<ILecturerServices, LecturerServices>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 
 

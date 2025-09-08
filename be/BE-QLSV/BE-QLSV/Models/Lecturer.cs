@@ -28,7 +28,7 @@ namespace BE_QLSV.Models
 
         public LecturerStatus IsActive { get; set; }
 
-        public int? AccountId { get; set; }  
+        public Guid? AccountId { get; set; }  
         public Account? Account { get; set; }  
 
         // 1 giảng viên có thể cố vấn nhiều lớp
