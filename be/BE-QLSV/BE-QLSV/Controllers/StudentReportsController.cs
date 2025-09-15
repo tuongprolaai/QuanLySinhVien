@@ -2,8 +2,6 @@
 using BE_QLSV.Interfaces;
 namespace BE_QLSV.Controllers
 {
-    public class StudentReportsController : Controller
-    {
         [ApiController]
         [Route("api/reports/students")]
         public class StudentReportController : ControllerBase
@@ -42,6 +40,19 @@ namespace BE_QLSV.Controllers
                     return BadRequest(ex.Message);
                 }
             }
+
+            [HttpGet("grades/{studentId}")]
+            public async Task<IActionResult> ExportGrades(Guid studentId)
+            {
+                try
+                {
+                    var result = await _reportService.ExportStudentGradesAsync(studentId);
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
         }
     }
-}

@@ -340,3 +340,11 @@ C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\obj\Debug\net8.0\r
 C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\obj\Debug\net8.0\BE-QLSV.pdb
 C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\obj\Debug\net8.0\BE-QLSV.genruntimeconfig.cache
 C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\obj\Debug\net8.0\ref\BE-QLSV.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\ClosedXML.Parser.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\RBush.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\tranq\Source\Repos\QuanLySinhVien\be\BE-QLSV\BE-QLSV\bin\Debug\net8.0\System.IO.Packaging.dll

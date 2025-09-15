@@ -783,6 +783,74 @@
         }
       }
     },
+    "/api/reports/students/by-class/{classId}": {
+      "get": {
+        "tags": [
+          "StudentReport"
+        ],
+        "parameters": [
+          {
+            "name": "classId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/reports/students/by-year/{schoolYear}": {
+      "get": {
+        "tags": [
+          "StudentReport"
+        ],
+        "parameters": [
+          {
+            "name": "schoolYear",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/reports/students/grades/{studentId}": {
+      "get": {
+        "tags": [
+          "StudentReport"
+        ],
+        "parameters": [
+          {
+            "name": "studentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Subject": {
       "get": {
         "tags": [

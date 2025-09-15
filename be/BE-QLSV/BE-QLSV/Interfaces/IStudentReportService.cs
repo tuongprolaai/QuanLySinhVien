@@ -7,5 +7,6 @@ namespace BE_QLSV.Interfaces
         Task<FileContentResult> ExportStudentsByClassAsync(Guid classId);
         Task<FileContentResult> ExportStudentsBySchoolYearAsync(string schoolYear);
         Task<FileContentResult> ExportStudentGradesAsync(Guid studentId);
+     
     }
 }

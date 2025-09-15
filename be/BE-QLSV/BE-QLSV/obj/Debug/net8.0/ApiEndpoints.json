@@ -320,6 +320,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BE_QLSV.Controllers.StudentReportController",
+    "Method": "ExportByClass",
+    "RelativePath": "api/reports/students/by-class/{classId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_QLSV.Controllers.StudentReportController",
+    "Method": "ExportBySchoolYear",
+    "RelativePath": "api/reports/students/by-year/{schoolYear}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "schoolYear",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_QLSV.Controllers.StudentReportController",
+    "Method": "ExportGrades",
+    "RelativePath": "api/reports/students/grades/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BE_QLSV.Controllers.RoleController",
     "Method": "GetAllRoles",
     "RelativePath": "api/Role",
